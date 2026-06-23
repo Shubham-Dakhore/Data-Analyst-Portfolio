@@ -1,0 +1,118 @@
+/* File: frontend/css/animations.css */
+
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================
+   SLIDE UP
+========================= */
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   SLIDE LEFT
+========================= */
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   SLIDE RIGHT
+========================= */
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   ANIMATION CLASSES
+========================= */
+
+.hero-content {
+    animation: slideLeft 1s ease;
+}
+
+.hero-image {
+    animation: slideRight 1s ease;
+}
+
+.section-title {
+    animation: fadeIn 1s ease;
+}
+
+.skill-card,
+.project-card,
+.resume-preview,
+.certifications,
+form {
+    animation: slideUp 0.8s ease;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+.hero-image img,
+.skill-card,
+.project-card,
+.btn {
+    transition: all 0.3s ease;
+}

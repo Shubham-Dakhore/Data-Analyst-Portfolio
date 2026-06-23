@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex,nofollow">
+
+    <title>Admin Dashboard</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Admin Panel</h2>
+
+            <ul>
+
+                <li>
+                    <a href="#dashboard">Dashboard</a>
+                </li>
+                
+                <li>
+                    <a href="#hero">Hero Section</a>
+                </li>
+                
+                <li>
+                    <a href="#about">About Section</a>
+                </li>
+                
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                
+                <li>
+                    <a href="#resume">Resume</a>
+                </li>
+                
+                <li>
+                    <a href="#certificates">Certificates</a>
+                </li>
+                
+                <li>
+                    <a href="#add-project">Add Project</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+
+
+
+
+
+                <li>
+                    
+                    <a href="#messages">Messages</a>
+                </li>
+
+                <li>
+                    <button id="logoutBtn">Logout</button>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- DASHBOARD -->
+            <section id="dashboard">
+
+                <h1>Dashboard</h1>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h3>Total Projects</h3>
+                        <p id="projectCount">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Messages</h3>
+                        <p id="messageCount">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Certifications</h3>
+                        <p id="certificationCount">0</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>Total Skills</h3>
+                        <p id="skillCount">0</p>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            <section id="hero">
+            
+                <h2>Hero Section</h2>
+            
+                <form id="heroForm">
+            
+                    <input
+                        type="text"
+                        id="heroName"
+                        placeholder="Full Name"
+                        required
+                    >
+            
+                    <input
+                        type="text"
+                        id="heroProfession"
+                        placeholder="Profession"
+                        required
+                    >
+            
+                    <textarea
+                        id="heroBio"
+                        placeholder="Short Bio"
+                    ></textarea>
+            
+                    <input
+                        type="url"
+                        id="heroLinkedin"
+                        placeholder="LinkedIn URL"
+                    >
+            
+                    <input
+                        type="url"
+                        id="heroGithub"
+                        placeholder="GitHub URL"
+                    >
+            
+                    <input
+                        type="email"
+                        id="heroEmail"
+                        placeholder="Email"
+                    >
+            
+                    <label>
+                        Profile Image
+                    </label>
+            
+                    <input
+                        type="file"
+                        id="heroImage"
+                        accept="image/*"
+                    >
+            
+                    <button type="submit">
+                        
+                        Save Hero
+                        
+                    </button>
+                    
+                </form>
+                
+            </section>
+            <!-- ====================================== -->
+            <!-- ABOUT MANAGEMENT -->
+            <!-- ====================================== -->
+            
+            <section  id="about" class="admin-section">
+            
+                <h2>About Management</h2>
+            
+                <form id="aboutForm">
+            
+                    <input
+                        type="text"
+                        id="aboutLocation"
+                        placeholder="Location"
+                    >
+            
+                    <input
+                        type="email"
+                        id="aboutEmail"
+                        placeholder="Email"
+                    >
+            
+                    <input
+                        type="text"
+                        id="aboutPhone"
+                        placeholder="Phone"
+                    >
+            
+                    <textarea
+                        id="aboutEducation"
+                        placeholder="Education"
+                    ></textarea>
+            
+                    <textarea
+                        id="aboutSummary"
+                        placeholder="Career Summary"
+                    ></textarea>
+            
+                    <textarea
+                        id="aboutJourney"
+                        placeholder="Journey"
+                    ></textarea>
+            
+                    <label>
+                        About Image
+                    </label>
+            
+                    
+            
+                    <input
+                        type="file"
+                        id="aboutImageUpload"
+                        accept="image/*"
+                    >
+            
+                    <button type="submit">
+                        Save About
+                    </button>
+            
+                </form>
+                
+            </section>
+            <section id="skills">
+    
+                <h2>Add Skill</h2>
+    
+                <form id="skillForm">
+    
+                <input
+                    type="text"
+                    id="skillName"
+                    placeholder="Skill Name"
+                    required
+                >
+    
+                <input
+                    type="number"
+                    id="skillPercentage"
+                    placeholder="Percentage"
+                    min="0"
+                    max="100"
+                    required
+                >
+    
+                <button type="submit">
+                    Add Skill
+                </button>
+    
+                </form>
+    
+                <div id="skillsList"></div>
+                
+            </section>
+            <!-- RESUME SECTION -->
+
+            <section id="resume">
+
+                <h2>Upload Resume</h2>
+
+                <form id="resumeForm">
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        accept=".pdf"
+                        required
+                    >
+
+                    <button type="submit">
+                        Upload Resume
+                    </button>
+
+                </form>
+
+                <p id="resumeStatus"></p>
+
+        
+
+            </form>
+            
+            <div id="resumeStatus">
+                
+            </div>
+            
+        </section>
+        <!-- CERTIFICATE SECTION -->
+
+        <section id="certificates">
+
+        <h2>Add Certificate</h2>
+
+        <form id="certificateForm">
+
+        <input
+            type="text"
+            id="certificateTitle"
+            placeholder="Certificate Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="certificateIssuer"
+            placeholder="Issuing Organization"
+            required
+        >
+
+        <input
+            type="date"
+            id="certificateDate"
+        >
+
+        <input
+            type="text"
+            id="credentialId"
+            placeholder="Credential ID"
+        >
+
+        <input
+            type="url"
+            id="certificateUrl"
+            placeholder="Certificate URL"
+        >
+
+        <textarea
+            id="certificateDescription"
+            placeholder="Certificate Description"
+        ></textarea>
+
+        <label>
+            Certificate Image
+        </label>
+
+        <input
+            type="file"
+            id="certificateImage"
+            accept="image/*"
+        >
+
+        <button type="submit">
+            Add Certificate
+        </button>
+
+        </form>
+
+        <hr>
+
+        <h2>
+            Certificate List
+        </h2>
+
+        <div id="certificateList">
+
+        </div>
+
+        </section>
+
+            <!-- ADD PROJECT -->
+            <section id="add-project" class="project-section">
+
+                <h2>Add Project</h2>
+
+                <form id="projectForm">
+
+                    <input type="text" id="title" placeholder="Project Title" required>
+
+                    <textarea id="description" placeholder="Project Description" rows="5" required></textarea>
+
+                    <input type="text" id="technologies" placeholder="Technologies Used">
+
+                    <input type="url" id="github" placeholder="GitHub URL">
+
+                    <input type="url" id="live" placeholder="Live Demo URL">
+
+                    <label>Project Cover Image</label>
+                    
+                    <input type="file" id="projectImage" accept="image/*">
+                    
+                    <button type="submit">Add Project</button>
+                    
+                </form>
+                
+            </section>
+
+            <!-- PROJECTS LIST -->
+            <section id="projects">
+
+                <h2>Projects</h2>
+
+                <div id="projectsList">
+                    <!-- Dynamic Projects -->
+                </div>
+
+            </section>
+
+
+
+            <!-- MESSAGES -->
+            <section id="messages">
+
+                <h2>Messages</h2>
+
+                <div id="messagesList">
+                    <p>No messages yet.</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/admin-api.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/about.js"></script>
+
+</body>
+
+</html>
